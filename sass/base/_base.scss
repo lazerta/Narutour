@@ -1,18 +1,40 @@
 
 html {
-  font-size : 62.5%;
+  font-size: 62.5%;
+  @include respond($phone) {
+    //8px 9 12
+    }
+  @include respond($tab-port) {
+    font-size: 50%;
+    }
+  @include respond($tab-land) {
+    font-size: 56.25%;
+    }
+  @include respond($pc) {
+    font-size: 75%;
+    }
   }
 
 *,
 *::before,
 *::after {
-  margin     : 0;
-  padding    : 0;
-  box-sizing : inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
   /***********f**enforce all element inherited from its parent*/
   }
 
 body {
-  box-sizing : border-box;
+  box-sizing: border-box;
+  padding: 3rem;
+  @include respond($tab-port){
+    padding: 0;
+    }
 
   }
+
+a {
+  text-decoration: none;
+  }
+
+
